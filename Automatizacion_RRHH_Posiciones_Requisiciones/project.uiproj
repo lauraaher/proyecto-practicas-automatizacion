@@ -1,0 +1,6 @@
+{
+  "Name": "Automatizacion_RRHH_Posiciones_Requisiciones",
+  "ProjectType": "Process",
+  "Description": "Prototipo de automatización y validación del proceso de creación de posiciones y requisiciones de Recursos Humanos.",
+  "MainFile": "Main.xaml"
+}

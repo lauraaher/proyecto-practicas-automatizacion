@@ -1,0 +1,771 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1037,14010" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSolicitudes" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtVacantesVP" />
+      <Variable x:TypeArguments="x:String" Name="tipoVacanteVP" />
+      <Variable x:TypeArguments="x:String" Name="centroCostoVP" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtResultados" />
+      <Variable x:TypeArguments="x:String" Name="resumenValidacion" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="01_Cargar_Fuentes" sap:VirtualizedContainerService.HintSize="720,13987" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ueab:ExcelApplicationCard DisplayName="Utilice el archivo de Excel" sap:VirtualizedContainerService.HintSize="686,620" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Data\Datos_Simulados_RRHH.xlsx">
+        <ueab:ExcelApplicationCard.Body>
+          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="450,391" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ReadRangeX DisplayName="Leer rango" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Table(&quot;SolicitudesTable&quot;)]" SaveTo="[dtSolicitudes]" />
+              <ueab:ReadRangeX DisplayName="Leer rango" sap:VirtualizedContainerService.HintSize="416,161" sap2010:WorkflowViewState.IdRef="ReadRangeX_2" Range="[Excel.Table(&quot;VacantesVPTable&quot;)]" SaveTo="[dtVacantesVP]" />
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelApplicationCard.Body>
+      </ueab:ExcelApplicationCard>
+      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="686,123" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Solicitudes cargadas: &quot; + dtSolicitudes.Rows.Count.ToString]" />
+      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="686,123" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Registros Vacantes VP cargados: &quot; + dtVacantesVP.Rows.Count.ToString]" />
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="dtResultados = New System.Data.DataTable()&#xA;&#xA;dtResultados.Columns.Add(&quot;Solicitud_ID&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Estado&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Motivo&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Tipo_Vacante_Solicitud&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Tipo_Vacante_VP&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Centro_Costo_Solicitud&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Centro_Costo_VP&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Salario&quot;, GetType(String))&#xA;&#xA;Dim lineas As New System.Collections.Generic.List(Of String)&#xA;&#xA;For Each fila As System.Data.DataRow In dtSolicitudes.Rows&#xA;&#xA;    Dim solicitudId As String = fila(&quot;Solicitud_ID&quot;).ToString.Trim&#xA;    Dim ubicacion As String = fila(&quot;Ubicacion&quot;).ToString.Trim&#xA;    Dim centroCosto As String = fila(&quot;Centro_Costo&quot;).ToString.Trim&#xA;    Dim tipoVacante As String = fila(&quot;Tipo_Vacante&quot;).ToString.Trim&#xA;    Dim salarioTexto As String = fila(&quot;Salario_Referencia&quot;).ToString.Trim&#xA;&#xA;    Dim estado As String = &quot;VALIDO PARA REGISTRO SIMULADO&quot;&#xA;    Dim motivo As String = &quot;&quot;&#xA;&#xA;    Dim tipoVacanteVP As String = &quot;&quot;&#xA;    Dim centroCostoVP As String = &quot;&quot;&#xA;&#xA;    ' 1. Validar campos obligatorios simulados&#xA;    If String.IsNullOrWhiteSpace(ubicacion) OrElse&#xA;       String.IsNullOrWhiteSpace(centroCosto) Then&#xA;&#xA;        estado = &quot;REQUIERE REVISION&quot;&#xA;        motivo = &quot;Campo obligatorio faltante&quot;&#xA;&#xA;    Else&#xA;&#xA;        ' 2. Buscar registro correspondiente en Vacantes VP&#xA;        Dim filaVP As System.Data.DataRow = Nothing&#xA;&#xA;        For Each vp As System.Data.DataRow In dtVacantesVP.Rows&#xA;            If vp(&quot;Solicitud_ID&quot;).ToString.Trim = solicitudId Then&#xA;                filaVP = vp&#xA;                Exit For&#xA;            End If&#xA;        Next&#xA;&#xA;        If filaVP Is Nothing Then&#xA;&#xA;            estado = &quot;REQUIERE REVISION&quot;&#xA;            motivo = &quot;Solicitud no encontrada en Vacantes VP&quot;&#xA;&#xA;        Else&#xA;&#xA;            tipoVacanteVP = filaVP(&quot;Tipo_Vacante_Control&quot;).ToString.Trim&#xA;            centroCostoVP = filaVP(&quot;Centro_Costo_Control&quot;).ToString.Trim&#xA;&#xA;            ' 3. Comparar tipo de vacante&#xA;            If tipoVacante &lt;&gt; tipoVacanteVP Then&#xA;&#xA;                estado = &quot;REQUIERE REVISION&quot;&#xA;                motivo = &quot;Tipo de vacante inconsistente entre fuentes&quot;&#xA;&#xA;            ' 4. Comparar centro de costo&#xA;            ElseIf centroCosto &lt;&gt; centroCostoVP Then&#xA;&#xA;                estado = &quot;REQUIERE REVISION&quot;&#xA;                motivo = &quot;Centro de costo inconsistente entre fuentes&quot;&#xA;&#xA;            Else&#xA;&#xA;                ' 5. Validar formato del salario&#xA;                Dim salarioNumerico As Decimal&#xA;&#xA;                If Not Decimal.TryParse(salarioTexto, salarioNumerico) Then&#xA;&#xA;                    estado = &quot;REQUIERE REVISION&quot;&#xA;                    motivo = &quot;Formato de salario no valido&quot;&#xA;&#xA;                End If&#xA;&#xA;            End If&#xA;&#xA;        End If&#xA;&#xA;    End If&#xA;&#xA;    dtResultados.Rows.Add(&#xA;        solicitudId,&#xA;        estado,&#xA;        motivo,&#xA;        tipoVacante,&#xA;        tipoVacanteVP,&#xA;        centroCosto,&#xA;        centroCostoVP,&#xA;        salarioTexto&#xA;    )&#xA;&#xA;    If estado = &quot;REQUIERE REVISION&quot; Then&#xA;&#xA;        lineas.Add(&#xA;            estado &amp;&#xA;            &quot; | &quot; &amp;&#xA;            solicitudId &amp;&#xA;            &quot; | &quot; &amp;&#xA;            motivo&#xA;        )&#xA;&#xA;    Else&#xA;&#xA;        lineas.Add(&#xA;            estado &amp;&#xA;            &quot; | &quot; &amp;&#xA;            solicitudId&#xA;        )&#xA;&#xA;    End If&#xA;&#xA;Next&#xA;&#xA;resumenValidacion =&#xA;    String.Join(&#xA;        System.Environment.NewLine,&#xA;        lineas.ToArray()&#xA;    )&#xA;&#x9;" DisplayName="Invocar código" sap:VirtualizedContainerService.HintSize="686,403" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="dtSolicitudes">[dtSolicitudes]</InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="dtVacantesVP">[dtVacantesVP]</InArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="dtResultados">[dtResultados]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="resumenValidacion">[resumenValidacion]</OutArgument>
+        </ui:InvokeCode.Arguments>
+      </ui:InvokeCode>
+      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="686,123" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[resumenValidacion]" />
+      <ueab:ExcelApplicationCard DisplayName="Utilice el archivo de Excel" sap:VirtualizedContainerService.HintSize="686,10157" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="Data\ResultadosValidacion.xlsx">
+        <ueab:ExcelApplicationCard.Body>
+          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="486,9928" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Resultados&quot;).Range(&quot;A1&quot;)]" DisplayName="Escribir TablaDeDatos a Excel" sap:VirtualizedContainerService.HintSize="452,222" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dtResultados]" />
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Simulador académico de registro RRHH" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,9646" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V2">
+                <uix:NApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="450,9451" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Solicitud ID" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Solicitud_ID&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="" ContentHash="KfPPDSUMXU-JdWhzG55QFw" DesignTimeRectangle="175, 423, 478, 35" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='p_sol' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="f87fe5a3-de7b-4ba4-8fcf-e135c59452c4" InformativeScreenshot="0ae21457da0e1a2a1be028fce282a669.jpg" IsResponsive="True" Reference="HFJrKrWikEmb-NT2CDlfCg/UCOUguIoZ0emg9KZeyZzTg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="175, 403, 478, 15" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Solicitud ID' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Solicitud ID' /&gt;" Guid="8b0ed9ad-a911-438f-8ef6-8d356615fc8e" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Cargo" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_24" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Cargo&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='p_cargo' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000001" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Area" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Area&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='p_area' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000002" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Jefe inmediato" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_26" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Jefe_Inmediato&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='p_jefe' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000003" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Ubicacion" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_27" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Ubicacion&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='p_ubicacion' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000004" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Motivo contratacion" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_28" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Motivo_Contratacion&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='p_motivo' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000005" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Centro costo" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_29" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Centro_Costo&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='p_cc' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000006" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Solicitud ID" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_30" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Solicitud_ID&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_sol' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000007" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Cargo" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_31" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Cargo&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_cargo' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000008" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Perfil requerido" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_32" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Perfil_Requerido&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_perfil' tag='TEXTAREA' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000009" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Experiencia" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_33" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Experiencia&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_exp' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000010" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Estudios" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_34" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Estudios&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_est' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000011" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Salario referencia" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_35" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Salario_Referencia&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_salario' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000012" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Centro costo" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_36" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Centro_Costo&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_cc' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000013" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Fecha ingreso" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_37" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Fecha_Ingreso&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_fecha' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000014" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Tipo contrato" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_38" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Tipo_Contrato&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_contrato' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000015" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Area" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_40" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Area&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='p_area' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000002" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Jefe inmediato" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_41" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Jefe_Inmediato&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='p_jefe' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000003" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Ubicacion" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_42" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Ubicacion&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='p_ubicacion' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000004" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Motivo contratacion" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_43" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Motivo_Contratacion&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='p_motivo' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000005" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Centro costo" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_44" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Centro_Costo&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='p_cc' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000006" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Solicitud ID" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_45" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Solicitud_ID&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_sol' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000007" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Cargo" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_46" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Cargo&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_cargo' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000008" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Perfil requerido" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_47" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Perfil_Requerido&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_perfil' tag='TEXTAREA' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000009" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Experiencia" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_48" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Experiencia&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_exp' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000010" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Estudios" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_49" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Estudios&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_est' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000011" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Salario referencia" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_50" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Salario_Referencia&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_salario' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000012" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Centro costo" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_51" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Centro_Costo&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_cc' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000013" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Fecha ingreso" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_52" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Fecha_Ingreso&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_fecha' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000014" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Tipo contrato" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_53" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Tipo_Contrato&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='r_contrato' tag='INPUT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a0000000-0000-4000-8000-000000000015" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Registrar posición simu…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="" ContentHash="m6bO3pGqb06Q1Qss6mHIaA" DesignTimeRectangle="175, 468, 195, 35" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" Guid="90db6551-f4d9-4b40-bd25-6f4a7772fb24" InformativeScreenshot="6b83318a0311137baedd6ffca9d77ba7.jpg" Reference="HFJrKrWikEmb-NT2CDlfCg/1tjS--kZnkOR7FVwJsvSpQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Registrar posición simu…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,236" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="" ContentHash="m6bO3pGqb06Q1Qss6mHIaA" DesignTimeRectangle="175, 468, 195, 35" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" Guid="90db6551-f4d9-4b40-bd25-6f4a7772fb24" InformativeScreenshot="6b83318a0311137baedd6ffca9d77ba7.jpg" Reference="HFJrKrWikEmb-NT2CDlfCg/1tjS--kZnkOR7FVwJsvSpQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </ActivityAction>
+                </uix:NApplicationCard.Body>
+                <uix:NApplicationCard.TargetApp>
+                  <uix:TargetApp Area="-1368, -8, 1376, 736" BrowserType="Chrome" ContentHash="Hq9fSzBQYUW7lx3pdCwx9Q" IconBase64="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" InformativeScreenshot="af55b4016ac117d256f6ea8b80c2de1e.jpg" Reference="HFJrKrWikEmb-NT2CDlfCg/zx2YFLgYpka7fYys40NCvg" Selector="&lt;html app='chrome.exe' title='Simulador académico de registro RRHH' /&gt;" Url="file:///C:/Users/hernandezl/OneDrive%20-%20HITSS/Documentos/Proyecto%20Practicas/UIPath/Automatizacion_RRHH_Posiciones_Requisiciones/Data/simulador_registro_rrhh.html" Version="V3" />
+                </uix:NApplicationCard.TargetApp>
+              </uix:NApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelApplicationCard.Body>
+      </ueab:ExcelApplicationCard>
+      <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="686,2355" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="650,2253" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtSolicitudes]" DisplayName="Para cada fila de la tabla de datos" sap:VirtualizedContainerService.HintSize="616,2193" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="FilaSolicitud" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="558,2020" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[String.IsNullOrWhiteSpace(filaSolicitud(&quot;Centro_Costo&quot;).ToString) OrElse String.IsNullOrWhiteSpace(filaSolicitud(&quot;Ubicacion&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="524,1960" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,174" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="488,114" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;REQUIERE REVISION | &quot; + filaSolicitud(&quot;Solicitud_ID&quot;).ToString + &quot; | Campo obligatorio faltante&quot;]" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,1624" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dtVacantesVP]" DisplayName="Buscar tabla de datos" sap:VirtualizedContainerService.HintSize="488,329" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="Solicitud_ID" LookupValue="[filaSolicitud(&quot;Solicitud_ID&quot;).ToString]" TargetColumnName="Tipo_Vacante_Control">
+                            <ui:LookupDataTable.CellValue>
+                              <OutArgument x:TypeArguments="x:String">[tipoVacanteVP]</OutArgument>
+                            </ui:LookupDataTable.CellValue>
+                          </ui:LookupDataTable>
+                          <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dtVacantesVP]" DisplayName="Buscar tabla de datos" sap:VirtualizedContainerService.HintSize="488,329" sap2010:WorkflowViewState.IdRef="LookupDataTable_2" LookupColumnName="Solicitud_ID" LookupValue="[filaSolicitud(&quot;Solicitud_ID&quot;).ToString]" TargetColumnName="Centro_Costo_Control">
+                            <ui:LookupDataTable.CellValue>
+                              <OutArgument x:TypeArguments="x:String">[centroCostoVP]</OutArgument>
+                            </ui:LookupDataTable.CellValue>
+                          </ui:LookupDataTable>
+                          <If Condition="[filaSolicitud(&quot;Tipo_Vacante&quot;).ToString.Trim &lt;&gt; tipoVacanteVP.ToString.Trim]" sap:VirtualizedContainerService.HintSize="488,906" sap2010:WorkflowViewState.IdRef="If_2">
+                            <If.Then>
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,174" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="452,114" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;REQUIERE REVISION | &quot; + filaSolicitud(&quot;Solicitud_ID&quot;).ToString + &quot; | Tipo de vacante inconsistente entre fuentes&quot;]" />
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,570" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <If Condition="[filaSolicitud(&quot;Centro_Costo&quot;).ToString.Trim &lt;&gt; centroCostoVP.ToString.Trim]" sap:VirtualizedContainerService.HintSize="452,510" sap2010:WorkflowViewState.IdRef="If_3">
+                                  <If.Then>
+                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[&quot;REQUIERE REVISION | &quot; + filaSolicitud(&quot;Solicitud_ID&quot;).ToString + &quot; | Centro de costo inconsistente entre fuentes&quot;]" />
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;VALIDO PARA SIGUIENTE VALIDACION | &quot; + filaSolicitud(&quot;Solicitud_ID&quot;).ToString]" />
+                                    </Sequence>
+                                  </If.Else>
+                                </If>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+    </Sequence>
+  </Sequence>
+</Activity>

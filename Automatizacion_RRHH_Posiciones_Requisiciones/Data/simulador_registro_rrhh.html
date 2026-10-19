@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Simulador académico de registro RRHH</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f6f8;margin:0;padding:24px;color:#222}
+.wrap{max-width:1050px;margin:auto}
+.banner{background:#1f4e78;color:white;padding:18px 22px;border-radius:8px}
+.note{background:#fff3cd;border:1px solid #ffe69c;padding:12px;margin:16px 0;border-radius:6px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:white;border:1px solid #dfe3e8;border-radius:8px;padding:18px}
+label{display:block;font-size:13px;font-weight:bold;margin-top:10px}
+input,select,textarea{width:100%;box-sizing:border-box;padding:9px;margin-top:5px;border:1px solid #b9c1c9;border-radius:4px}
+button{margin-top:16px;padding:10px 16px;border:0;border-radius:5px;background:#1f4e78;color:white;cursor:pointer}
+.status{margin-top:12px;padding:10px;background:#eef5fb;border-radius:5px;min-height:20px}
+.footer{margin-top:18px;color:#666;font-size:12px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="banner">
+    <h2>Simulador académico de registro de posiciones y requisiciones</h2>
+    <div>Prototipo de prácticas profesionales — datos ficticios</div>
+  </div>
+  <div class="note"><b>Importante:</b> Esta interfaz NO es SuccessFactors y no representa su diseño real. Se usa únicamente para demostrar el flujo automatizado sin acceso al sistema corporativo.</div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Crear posición — simulación</h3>
+      <label>Solicitud ID</label><input id="p_sol">
+      <label>Cargo</label><input id="p_cargo">
+      <label>Área</label><input id="p_area">
+      <label>Jefe inmediato</label><input id="p_jefe">
+      <label>Ubicación</label><input id="p_ubicacion">
+      <label>Tipo de vacante</label>
+      <select id="p_tipo"><option>Nueva posicion</option><option>Reemplazo</option></select>
+      <label>Motivo de contratación</label><input id="p_motivo">
+      <label>Centro de costo</label><input id="p_cc">
+      <button onclick="guardar('posicion')">Registrar posición simulada</button>
+      <div class="status" id="s_pos"></div>
+    </div>
+
+    <div class="card">
+      <h3>Crear requisición — simulación</h3>
+      <label>Solicitud ID</label><input id="r_sol">
+      <label>Cargo</label><input id="r_cargo">
+      <label>Perfil requerido</label><textarea id="r_perfil"></textarea>
+      <label>Experiencia</label><input id="r_exp">
+      <label>Estudios</label><input id="r_est">
+      <label>Salario de referencia</label><input id="r_salario">
+      <label>Centro de costo</label><input id="r_cc">
+      <label>Fecha de ingreso</label><input id="r_fecha">
+      <label>Tipo de contrato</label><input id="r_contrato">
+      <button onclick="guardar('requisicion')">Registrar requisición simulada</button>
+      <div class="status" id="s_req"></div>
+    </div>
+  </div>
+  <div class="footer">El objetivo es permitir que UiPath automatice una interfaz controlada y mostrar lectura, validación, escritura y trazabilidad sin utilizar información real ni credenciales corporativas.</div>
+</div>
+
+<script>
+function guardar(tipo){
+  const id = tipo === 'posicion' ? document.getElementById('p_sol').value : document.getElementById('r_sol').value;
+  const target = tipo === 'posicion' ? 's_pos' : 's_req';
+  if(!id){
+    document.getElementById(target).innerText='ERROR: Solicitud ID es obligatoria.';
+    return;
+  }
+  const key = 'registro_'+tipo+'_'+id+'_'+Date.now();
+  localStorage.setItem(key, JSON.stringify({tipo:tipo, solicitud_id:id, fecha:new Date().toISOString()}));
+  document.getElementById(target).innerText='OK: '+tipo+' simulada registrada para '+id+'. Estado: PENDIENTE DE APROBACIÓN HUMANA.';
+}
+</script>
+</body>
+</html>
