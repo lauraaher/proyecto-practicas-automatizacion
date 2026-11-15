@@ -1,0 +1,822 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1001,27413" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSolicitudes" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtVacantesVP" />
+      <Variable x:TypeArguments="x:String" Name="tipoVacanteVP" />
+      <Variable x:TypeArguments="x:String" Name="centroCostoVP" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtResultados" />
+      <Variable x:TypeArguments="x:String" Name="resumenValidacion" />
+      <Variable x:TypeArguments="x:String" Name="IdCasoDemo">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">SOL-003</Literal>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="01_Cargar_Fuentes" sap:VirtualizedContainerService.HintSize="824,27390" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ueab:ExcelApplicationCard DisplayName="Utilice el archivo de Excel" sap:VirtualizedContainerService.HintSize="790,620" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Data\Datos_Simulados_RRHH.xlsx">
+        <ueab:ExcelApplicationCard.Body>
+          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="450,391" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ReadRangeX DisplayName="Leer rango" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Table(&quot;SolicitudesTable&quot;)]" SaveTo="[dtSolicitudes]" />
+              <ueab:ReadRangeX DisplayName="Leer rango" sap:VirtualizedContainerService.HintSize="416,161" sap2010:WorkflowViewState.IdRef="ReadRangeX_2" Range="[Excel.Table(&quot;VacantesVPTable&quot;)]" SaveTo="[dtVacantesVP]" />
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelApplicationCard.Body>
+      </ueab:ExcelApplicationCard>
+      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="790,123" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Solicitudes cargadas: &quot; + dtSolicitudes.Rows.Count.ToString]" />
+      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="790,123" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Registros Vacantes VP cargados: &quot; + dtVacantesVP.Rows.Count.ToString]" />
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="dtResultados = New System.Data.DataTable()&#xA;&#xA;dtResultados.Columns.Add(&quot;Solicitud_ID&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Estado&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Motivo&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Tipo_Vacante_Solicitud&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Tipo_Vacante_VP&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Centro_Costo_Solicitud&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Centro_Costo_VP&quot;, GetType(String))&#xA;dtResultados.Columns.Add(&quot;Salario&quot;, GetType(String))&#xA;&#xA;Dim lineas As New System.Collections.Generic.List(Of String)&#xA;&#xA;For Each fila As System.Data.DataRow In dtSolicitudes.Rows&#xA;&#xA;    Dim solicitudId As String = fila(&quot;Solicitud_ID&quot;).ToString.Trim&#xA;    Dim ubicacion As String = fila(&quot;Ubicacion&quot;).ToString.Trim&#xA;    Dim centroCosto As String = fila(&quot;Centro_Costo&quot;).ToString.Trim&#xA;    Dim tipoVacante As String = fila(&quot;Tipo_Vacante&quot;).ToString.Trim&#xA;    Dim salarioTexto As String = fila(&quot;Salario_Referencia&quot;).ToString.Trim&#xA;&#xA;    Dim estado As String = &quot;VALIDO PARA REGISTRO SIMULADO&quot;&#xA;    Dim motivo As String = &quot;&quot;&#xA;&#xA;    Dim tipoVacanteVP As String = &quot;&quot;&#xA;    Dim centroCostoVP As String = &quot;&quot;&#xA;&#xA;    ' 1. Validar campos obligatorios simulados&#xA;    If String.IsNullOrWhiteSpace(ubicacion) OrElse&#xA;       String.IsNullOrWhiteSpace(centroCosto) Then&#xA;&#xA;        estado = &quot;REQUIERE REVISION&quot;&#xA;        motivo = &quot;Campo obligatorio faltante&quot;&#xA;&#xA;    Else&#xA;&#xA;        ' 2. Buscar registro correspondiente en Vacantes VP&#xA;        Dim filaVP As System.Data.DataRow = Nothing&#xA;&#xA;        For Each vp As System.Data.DataRow In dtVacantesVP.Rows&#xA;            If vp(&quot;Solicitud_ID&quot;).ToString.Trim = solicitudId Then&#xA;                filaVP = vp&#xA;                Exit For&#xA;            End If&#xA;        Next&#xA;&#xA;        If filaVP Is Nothing Then&#xA;&#xA;            estado = &quot;REQUIERE REVISION&quot;&#xA;            motivo = &quot;Solicitud no encontrada en Vacantes VP&quot;&#xA;&#xA;        Else&#xA;&#xA;            tipoVacanteVP = filaVP(&quot;Tipo_Vacante_Control&quot;).ToString.Trim&#xA;            centroCostoVP = filaVP(&quot;Centro_Costo_Control&quot;).ToString.Trim&#xA;&#xA;            ' 3. Comparar tipo de vacante&#xA;            If tipoVacante &lt;&gt; tipoVacanteVP Then&#xA;&#xA;                estado = &quot;REQUIERE REVISION&quot;&#xA;                motivo = &quot;Tipo de vacante inconsistente entre fuentes&quot;&#xA;&#xA;            ' 4. Comparar centro de costo&#xA;            ElseIf centroCosto &lt;&gt; centroCostoVP Then&#xA;&#xA;                estado = &quot;REQUIERE REVISION&quot;&#xA;                motivo = &quot;Centro de costo inconsistente entre fuentes&quot;&#xA;&#xA;            Else&#xA;&#xA;                ' 5. Validar formato del salario&#xA;                Dim salarioNumerico As Decimal&#xA;&#xA;                If Not Decimal.TryParse(salarioTexto, salarioNumerico) Then&#xA;&#xA;                    estado = &quot;REQUIERE REVISION&quot;&#xA;                    motivo = &quot;Formato de salario no valido&quot;&#xA;&#xA;                End If&#xA;&#xA;            End If&#xA;&#xA;        End If&#xA;&#xA;    End If&#xA;&#xA;    dtResultados.Rows.Add(&#xA;        solicitudId,&#xA;        estado,&#xA;        motivo,&#xA;        tipoVacante,&#xA;        tipoVacanteVP,&#xA;        centroCosto,&#xA;        centroCostoVP,&#xA;        salarioTexto&#xA;    )&#xA;&#xA;    If estado = &quot;REQUIERE REVISION&quot; Then&#xA;&#xA;        lineas.Add(&#xA;            estado &amp;&#xA;            &quot; | &quot; &amp;&#xA;            solicitudId &amp;&#xA;            &quot; | &quot; &amp;&#xA;            motivo&#xA;        )&#xA;&#xA;    Else&#xA;&#xA;        lineas.Add(&#xA;            estado &amp;&#xA;            &quot; | &quot; &amp;&#xA;            solicitudId&#xA;        )&#xA;&#xA;    End If&#xA;&#xA;Next&#xA;&#xA;resumenValidacion =&#xA;    String.Join(&#xA;        System.Environment.NewLine,&#xA;        lineas.ToArray()&#xA;    )&#xA;&#x9;" DisplayName="Invocar código" sap:VirtualizedContainerService.HintSize="790,403" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="dtSolicitudes">[dtSolicitudes]</InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="dtVacantesVP">[dtVacantesVP]</InArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="dtResultados">[dtResultados]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="resumenValidacion">[resumenValidacion]</OutArgument>
+        </ui:InvokeCode.Arguments>
+      </ui:InvokeCode>
+      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="790,123" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[resumenValidacion]" />
+      <ueab:ExcelApplicationCard DisplayName="Utilice el archivo de Excel" sap:VirtualizedContainerService.HintSize="790,25915" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="Data\ResultadosValidacion.xlsx">
+        <ueab:ExcelApplicationCard.Body>
+          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="788,25695" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="ui:DatabaseConnection" Name="conexionSQLite" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Resultados&quot;).Range(&quot;A1&quot;)]" DisplayName="Escribir TablaDeDatos a Excel" sap:VirtualizedContainerService.HintSize="754,222" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dtResultados]" />
+              <ui:DatabaseTransaction ContinueOnError="{x:Null}" ConnectionString="Data Source=C:\Users\hernandezl\OneDrive - HITSS\Documentos\Proyecto Practicas\UIPath\Automatizacion_RRHH_Posiciones_Requisiciones\Data\rrhh_trazabilidad.db;Foreign Keys=True;" DatabaseConnection="[conexionSQLite]" DisplayName="SQLite - conexión" sap:VirtualizedContainerService.HintSize="754,1654" sap2010:WorkflowViewState.IdRef="DatabaseTransaction_1" ProviderName="Microsoft.Data.Sqlite" UseTransaction="True">
+                <ui:DatabaseTransaction.Body>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="650,1512" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="dtConteoEjecuciones" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="dtConteoErrores" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="SQLite - Crear estructura si no existe" ExistingDbConnection="[conexionSQLite]" sap:VirtualizedContainerService.HintSize="616,147" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2" Sql="CREATE TABLE If Not EXISTS errores_validacion (&#xA;    id Integer PRIMARY KEY AUTOINCREMENT,&#xA;    fecha_hora TEXT Not NULL,&#xA;    solicitud_id TEXT Not NULL,&#xA;    campo TEXT,&#xA;    tipo_error TEXT,&#xA;    detalle TEXT&#xA;);">
+                      <ui:ExecuteNonQuery.Parameters>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:ExecuteNonQuery.Parameters>
+                    </ui:ExecuteNonQuery>
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtResultados]" DisplayName="SQLite - Guardar resultados de validación" sap:VirtualizedContainerService.HintSize="616,774" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="filaResultado" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="486,592" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="SQLite - Insertar ejecución" ExistingDbConnection="[conexionSQLite]" sap:VirtualizedContainerService.HintSize="452,147" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_9" Sql="INSERT INTO ejecuciones (fecha_hora, solicitud_id, estado, mensaje) VALUES (@fecha_hora, @solicitud_id, @estado, @mensaje);">
+                              <ui:ExecuteNonQuery.Parameters>
+                                <InArgument x:TypeArguments="x:String" x:Key="@fecha_hora">[Now.ToString("yyyy-MM-dd HH:mm:ss")]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="@solicitud_id">[filaResultado("Solicitud_ID").ToString]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="@estado">[filaResultado("Estado").ToString]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="@mensaje">[filaResultado("Motivo").ToString]</InArgument>
+                              </ui:ExecuteNonQuery.Parameters>
+                            </ui:ExecuteNonQuery>
+                            <If Condition="[filaResultado(&quot;Estado&quot;).ToString.Trim.Equals(&quot;REQUIERE REVISION&quot;, StringComparison.OrdinalIgnoreCase)]" sap:VirtualizedContainerService.HintSize="452,385" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If.Then>
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,198" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="SQLite - Insertar error de validación" ExistingDbConnection="[conexionSQLite]" sap:VirtualizedContainerService.HintSize="416,138" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_10" Sql="INSERT INTO errores_validacion (fecha_hora, solicitud_id, campo, tipo_error, detalle) VALUES (@fecha_hora, @solicitud_id, @campo, @tipo_error, @detalle);">
+                                    <ui:ExecuteNonQuery.Parameters>
+                                      <InArgument x:TypeArguments="x:String" x:Key="@fecha_hora">[Now.ToString("yyyy-MM-dd HH:mm:ss")]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="@solicitud_id">[filaResultado("Solicitud_ID").ToString]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="@campo">
+                                        <Literal x:TypeArguments="x:String" Value="" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="@tipo_error">VALIDACION</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="@detalle">[filaResultado("Motivo").ToString]</InArgument>
+                                    </ui:ExecuteNonQuery.Parameters>
+                                  </ui:ExecuteNonQuery>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                    </ui:ForEachRow>
+                    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dtConteoEjecuciones]" DisplayName="SQLite - Consultar ejecuciones" ExistingDbConnection="[conexionSQLite]" sap:VirtualizedContainerService.HintSize="616,147" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT COUNT(*) AS Total FROM ejecuciones;">
+                      <ui:ExecuteQuery.Parameters>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:ExecuteQuery.Parameters>
+                    </ui:ExecuteQuery>
+                    <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="616,123" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[&quot;SQLite ejecuciones registradas: &quot; + dtConteoEjecuciones.Rows(0)(&quot;Total&quot;).ToString]" />
+                    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dtConteoErrores]" DisplayName="SQLite - Consultar errores" ExistingDbConnection="[conexionSQLite]" sap:VirtualizedContainerService.HintSize="616,147" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="SELECT COUNT(*) AS Total FROM errores_validacion;">
+                      <ui:ExecuteQuery.Parameters>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:ExecuteQuery.Parameters>
+                    </ui:ExecuteQuery>
+                    <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="616,114" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot;SQLite errores registrados: &quot; + dtConteoErrores.Rows(0)(&quot;Total&quot;).ToString]" />
+                  </Sequence>
+                </ui:DatabaseTransaction.Body>
+              </ui:DatabaseTransaction>
+              <If Condition="[dtResultados.Select(&quot;Solicitud_ID = '&quot; + idCasoDemo + &quot;' AND Estado = 'VALIDO PARA REGISTRO SIMULADO'&quot;).Length &gt; 0]" DisplayName="Validar caso antes del registro simulado" sap:VirtualizedContainerService.HintSize="754,23759" sap2010:WorkflowViewState.IdRef="If_2">
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="752,23423" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="conexionSQLiteWeb" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="dtConteoPosiciones" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="dtConteoRequisiciones" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome Simulador académico RRHH v2" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="718,21968" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="450,21764" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="NAVEGACION - Buscar Gestionar cargos" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_62" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;Gestionar cargos&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='globalSearch' tag='INPUT' /&gt;" Guid="050a9820-0108-43cf-906c-f298ab026bb8" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                              <uix:NTypeInto.VerifyOptions>
+                                <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                </uix:VerifyExecutionTypeIntoOptions>
+                              </uix:NTypeInto.VerifyOptions>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="NAVEGACION - Abrir Gestionar cargos" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='searchGestionarCargos' tag='DIV' /&gt;" Guid="f74bd42f-c7fd-49d4-bbe1-1721f68312f9" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="NAVEGACION - Crear nuevo Posición - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='crearNuevo' tag='SELECT' /&gt;" Guid="0033783a-51a5-4d1b-ac28-a61d35b4f8ca" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="NAVEGACION - Crear nuevo Posición" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="Posición" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='crearNuevo' tag='SELECT' /&gt;" Guid="6899c870-6730-4a20-961b-48c94b303967" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Código" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_63" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Solicitud_ID&quot;).ToString]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_codigo' tag='INPUT' /&gt;" Guid="3a4db619-0e94-443f-8e25-25347756991b" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Posición - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_posicion' tag='SELECT' /&gt;" Guid="f4d409b7-0fa6-4e42-9fdc-c4b46903be85" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Posición" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="Posición estándar" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_posicion' tag='SELECT' /&gt;" Guid="e1561e04-3d6b-4b35-a968-021eab48a361" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Estatus - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_estatus' tag='SELECT' /&gt;" Guid="55df213a-0c23-45fd-bee5-aa24165037e5" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Estatus" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="Activo" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_estatus' tag='SELECT' /&gt;" Guid="050bb65a-4a07-439b-94e5-74d1839a13a4" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Fecha Inicio" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_64" InteractionMode="Simulate" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[CDate(dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Fecha_Ingreso&quot;)).ToString(&quot;dd/MM/yyyy&quot;)]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_fecha_inicio' tag='INPUT' /&gt;" Guid="b57c5929-5701-4600-a33c-0818f0efab3e" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Motivo de Posición - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_motivo' tag='SELECT' /&gt;" Guid="8615c00e-5b79-4f4a-859b-ffb3006361dd" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Motivo de Posición" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_8" Item="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Tipo_Vacante&quot;).ToString.Replace(&quot;Nueva posicion&quot;,&quot;Nueva posición&quot;)]" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_motivo' tag='SELECT' /&gt;" Guid="166a598c-94b4-4c13-a30e-5ec7ca1a1eec" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="POSICION - Nombre de Posición" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_65" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Cargo&quot;).ToString]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_nombre' tag='INPUT' /&gt;" Guid="0ed85575-291c-4538-b330-6db8c0b58f54" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Clasificación de Puesto - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_clasificacion' tag='SELECT' /&gt;" Guid="4c3cdcb1-606f-4b16-8705-766f813db8ae" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Clasificación de Puesto" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_9" Item="Profesional" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_clasificacion' tag='SELECT' /&gt;" Guid="bd54a9b7-5259-4cfc-a344-1613ecb59012" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Grupo de Personal - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_17" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_grupo' tag='SELECT' /&gt;" Guid="3ddcc68a-c27a-40d6-aeef-1d7068817950" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Grupo de Personal" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_10" Item="Empleados" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_grupo' tag='SELECT' /&gt;" Guid="9e94ef7c-7c7f-4486-89e0-0812508a01e1" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Área de Personal - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_area' tag='SELECT' /&gt;" Guid="3806c03e-0806-4e09-a630-1ecc86d658c2" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Área de Personal" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_11" Item="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Area&quot;).ToString.Replace(&quot;Tecnologia&quot;,&quot;Tecnología&quot;)]" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_area' tag='SELECT' /&gt;" Guid="7cda28a0-de2b-4577-8a09-7fa5dd6f59d7" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Tipo de Posición - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_19" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_tipo' tag='SELECT' /&gt;" Guid="b2fa9072-aa4e-46de-a1cd-e6973ee761e9" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Tipo de Posición" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_12" Item="PERMANENTE" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_tipo' tag='SELECT' /&gt;" Guid="0b9b4e49-1b3f-44e7-b445-c983e50d0f6f" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Sociedad - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_sociedad' tag='SELECT' /&gt;" Guid="29553ec0-b8a2-4253-9873-ecf3b4a9f2b1" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Sociedad" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_13" Item="Sociedad simulada 01" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_sociedad' tag='SELECT' /&gt;" Guid="5d3be969-f257-4c90-a828-0d2e0f91f320" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Línea de Negocio - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_21" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_linea' tag='SELECT' /&gt;" Guid="abeaf351-49a5-46ba-9b41-013a93cc70fd" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Línea de Negocio" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_14" Item="Servicios TI" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_linea' tag='SELECT' /&gt;" Guid="e0ab6ac4-d09d-4229-b79b-90db8513bb89" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - División de Personal - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_22" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_division' tag='SELECT' /&gt;" Guid="19430987-e79a-4428-bf40-d9a92ad73d27" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - División de Personal" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_15" Item="División 01" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_division' tag='SELECT' /&gt;" Guid="d577f680-0f41-4aba-ac37-06288aa96065" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Unidad Organizativa - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_23" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_unidad' tag='SELECT' /&gt;" Guid="0295aebc-4b88-4d5a-9f1f-7d67d0df52ff" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Unidad Organizativa" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_16" Item="Unidad 01" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_unidad' tag='SELECT' /&gt;" Guid="80f044ef-04db-442e-808e-187ff043f422" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Localidad - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_24" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_localidad' tag='SELECT' /&gt;" Guid="7bf36f72-8308-453c-b7a0-ae7416fcbc37" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Localidad" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_17" Item="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Ubicacion&quot;).ToString.Replace(&quot;Bogota&quot;,&quot;Bogotá&quot;)]" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_localidad' tag='SELECT' /&gt;" Guid="4feed933-4d8d-4b94-8c50-2d77c9820156" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Centro de Costos - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_25" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_centro_costos' tag='SELECT' /&gt;" Guid="dda7432f-6a3c-40b8-8af2-0264d544a618" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Centro de Costos" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_18" Item="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Centro_Costo&quot;).ToString]" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_centro_costos' tag='SELECT' /&gt;" Guid="c6548dda-a9d7-478a-bd44-30446bc1fb87" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Control de Posición - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_26" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_control' tag='SELECT' /&gt;" Guid="eed975e0-75f2-4870-a7dc-e90ea9f9ee18" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Control de Posición" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_19" Item="SI" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_control' tag='SELECT' /&gt;" Guid="709834af-a2d5-4918-9ce0-611e7200e84a" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Posición Clave - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_27" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_clave' tag='SELECT' /&gt;" Guid="079d73d5-5abd-4a80-8ba9-3d888123ceef" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="POSICION - Posición Clave" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_20" Item="NO" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pos_clave' tag='SELECT' /&gt;" Guid="c7cda822-48c8-433d-b23f-85b91a785a08" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="POSICION - Guardar" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_28" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='btnGuardarPos' tag='BUTTON' /&gt;" Guid="b60920b6-e0a6-495a-af86-4e887011a481" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="NAVEGACION - Volver a Inicio" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_29" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='backHomeFromAdmin' tag='A' /&gt;" Guid="db4712d7-e703-41ff-b140-00070ef63144" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="NAVEGACION - Abrir requisición" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_30" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='openRequisition' tag='DIV' /&gt;" Guid="969f14f9-2c49-4b75-b2ce-d5e41c8cb9bc" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Cliente" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_66" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;Cliente Simulado&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_cliente' tag='INPUT' /&gt;" Guid="ee9d553d-dd26-4ad4-b366-b1580f6c734c" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Nombre del proyecto" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_67" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;Proyecto académico - &quot; + dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Solicitud_ID&quot;).ToString]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_nombre_proyecto' tag='INPUT' /&gt;" Guid="404e514e-2241-4213-bba5-e500f80956bc" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Número de proyecto" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_68" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Solicitud_ID&quot;).ToString]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_numero_proyecto' tag='INPUT' /&gt;" Guid="505b7560-aa4d-435c-af61-43fb86dfb97e" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="REQUISICION - Motivo de la vacante - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_31" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_motivo_vacante' tag='SELECT' /&gt;" Guid="f2a638b0-d868-4c7c-8969-c4e2949a8ffd" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="REQUISICION - Motivo de la vacante" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_21" Item="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Tipo_Vacante&quot;).ToString.Replace(&quot;Nueva posicion&quot;,&quot;Nueva posición&quot;)]" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_motivo_vacante' tag='SELECT' /&gt;" Guid="1d9e8ebd-a09b-4dd8-b3a8-ab5a6e1920c9" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="REQUISICION - Tipo de convocatoria - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_32" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_tipo_convocatoria' tag='SELECT' /&gt;" Guid="a90cc21b-2080-49f1-8781-20bd01552439" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="REQUISICION - Tipo de convocatoria" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_22" Item="Externa" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_tipo_convocatoria' tag='SELECT' /&gt;" Guid="d1e805a0-f601-4ffb-b994-c90ed980f9eb" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Justificación" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_69" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Motivo_Contratacion&quot;).ToString]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_justificacion' tag='TEXTAREA' /&gt;" Guid="6e32b838-4d7f-42d0-905b-75bf76aefc7c" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Ubicación física" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_70" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Ubicacion&quot;).ToString]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_ubicacion' tag='INPUT' /&gt;" Guid="bc5e378b-03c4-42dc-a753-0ec6b5e5ae4d" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Fecha estimada de ingreso" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_71" InteractionMode="DebuggerApi" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[CDate(dtSolicitudes.Select(&quot;Solicitud_ID = 'SOL-001'&quot;)(0)(&quot;Fecha_Ingreso&quot;)).ToString(&quot;yyyy-MM-dd&quot;)]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_fecha_ingreso' tag='INPUT' /&gt;" Guid="b71e48b2-d78b-459f-977b-89f7f8514289" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Actividades del puesto" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_72" InteractionMode="Simulate" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;1. Actividad simulada de análisis. 2. Actividad simulada de validación. 3. Actividad simulada de documentación. 4. Actividad simulada de automatización.&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_actividades' tag='TEXTAREA' /&gt;" Guid="833c9196-9d31-45b9-b28d-f13f0dbcb5a9" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Horarios de trabajo" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_73" InteractionMode="Simulate" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="Horario administrativo (SIMULADO)" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_horarios' tag='INPUT' /&gt;" Guid="39931352-e1f5-480f-a1a2-e507dc2d4ef5" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="REQUISICION - Modalidad - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_33" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_modalidad' tag='SELECT' /&gt;" Guid="8a7f9c63-e3f4-469f-b033-86bf679e375a" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="REQUISICION - Modalidad" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_23" Item="HB - Híbrido" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_modalidad' tag='SELECT' /&gt;" Guid="fd50c5ee-87c5-4748-80f1-c49bdee7f99e" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Duración de asignación" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_74" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="12 meses SIMULADO" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_duracion' tag='INPUT' /&gt;" Guid="619975b0-6383-4dc7-b11f-6d79b998e913" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="REQUISICION - Tecnologías - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_34" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_tecnologias' tag='SELECT' /&gt;" Guid="ad148800-0088-447e-82eb-2ed473207813" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="REQUISICION - Tecnologías" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_24" Item="Python / SQL" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_tecnologias' tag='SELECT' /&gt;" Guid="444d9190-a15b-4c72-a460-7227df90ffc2" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="REQUISICION - Tipo de puesto - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_35" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_tipo_puesto' tag='SELECT' /&gt;" Guid="b53bd826-aa87-4a96-a5f8-b0681f9369bf" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="REQUISICION - Tipo de puesto" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_25" Item="Profesional" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_tipo_puesto' tag='SELECT' /&gt;" Guid="3a45a1df-b574-4523-82ea-bd33c2ea9348" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="REQUISICION - Rol - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_36" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_rol' tag='SELECT' /&gt;" Guid="3ca0cb43-8235-400c-b99a-aea28af0f06a" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="REQUISICION - Rol" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_26" Item="Analista" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_rol' tag='SELECT' /&gt;" Guid="3ce96b32-90b6-4f49-9c64-986bca29db5f" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="REQUISICION - Práctica - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_37" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_practica' tag='SELECT' /&gt;" Guid="ae0c1459-a64a-411e-ab26-ab62f30036f6" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="REQUISICION - Práctica" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_27" Item="Datos" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_practica' tag='SELECT' /&gt;" Guid="84b8ba80-00d1-4608-958a-0d262405a79e" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="REQUISICION - Tecnología - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_38" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_tecnologia' tag='SELECT' /&gt;" Guid="fe789afd-b24b-44a0-8728-588d0fb762ce" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="REQUISICION - Tecnología" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_28" Item="Python" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_tecnologia' tag='SELECT' /&gt;" Guid="d09ba5b7-c984-4189-8f8a-d6b962f22492" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="REQUISICION - Nivel requerido - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_39" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_nivel' tag='SELECT' /&gt;" Guid="a0dc8bb1-c8ef-47b0-8e4a-65771d5e599f" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="REQUISICION - Nivel requerido" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_29" Item="Intermedio" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_nivel' tag='SELECT' /&gt;" Guid="aa796447-9063-40ac-acc9-78efe80b40db" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Nombre del cliente" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_75" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;Cliente Simulado&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_cliente_nombre' tag='INPUT' /&gt;" Guid="d26e9e03-40ab-4a56-a100-f11cb4c6e964" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Ubicación del cliente" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_76" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;Bogotá&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_cliente_ubicacion' tag='INPUT' /&gt;" Guid="7b7419fd-9bcc-4036-8c75-054984c8bfae" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Correo del cliente" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_77" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;cliente.simulado@example.com&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_cliente_correo' tag='INPUT' /&gt;" Guid="b1449cda-b056-4f2d-80a9-37c1684e7d64" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Teléfono del cliente" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_78" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;3000000000&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_cliente_telefono' tag='INPUT' /&gt;" Guid="696f4844-1790-44ee-8beb-d273e78f075b" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="REQUISICION - Moneda - abrir lista" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245" sap2010:WorkflowViewState.IdRef="NClick_40" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_moneda' tag='SELECT' /&gt;" Guid="9ef6dab2-8409-475a-9bf3-5f773dec5550" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="REQUISICION - Moneda" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NSelectItem_30" Item="COP" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_moneda' tag='SELECT' /&gt;" Guid="8d0710be-f8c7-45b3-ac15-d86c7b15f36b" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Costo autorizado" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_79" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;5000000&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_costo_autorizado' tag='INPUT' /&gt;" Guid="f5d7c3fa-d5ea-40af-8b56-900d5e117445" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Costo total final" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_80" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;4800000&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_costo_final' tag='INPUT' /&gt;" Guid="a2cc7fc8-92ee-42fb-866e-48a0df82be2d" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Tarifa" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_81" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;6500000&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_tarifa' tag='INPUT' /&gt;" Guid="e623de0e-79f4-4a86-a165-813958f32591" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Rentabilidad" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_82" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="26% (SIMULADO)" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_rentabilidad' tag='INPUT' /&gt;" Guid="cec30d2f-0319-45a0-a5d7-34a37aa7b1c4" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - OCP Finanzas" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_83" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;OCP FINANZAS SIMULADO&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_finanzas' tag='INPUT' /&gt;" Guid="0debc056-4585-4cb1-8771-fd631087f21b" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Gerente Atracción Talento" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_84" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;GERENTE ATRACCIÓN TALENTO SIMULADO&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_gerente' tag='INPUT' /&gt;" Guid="1650766a-c349-4ea1-8ac3-06e47a3b1f97" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Analista" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_85" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;ANALISTA SIMULADO&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_analista' tag='INPUT' /&gt;" Guid="f7def4c4-29e3-4257-920c-b11e3793353b" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Recursos Humanos" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_86" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;RECURSOS HUMANOS SIMULADO&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_rrhh' tag='INPUT' /&gt;" Guid="54b14c1e-9639-4d1d-8d2b-308760e3119f" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="REQUISICION - Comentarios OCP/Finanzas" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="NTypeInto_87" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Text="[&quot;Validación académica simulada.&quot;]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='req_comentarios_finanzas' tag='TEXTAREA' /&gt;" Guid="a3a06683-7ec9-43c0-8777-bdc7dd18b77a" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="REQUISICION - Guardar" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,236" sap2010:WorkflowViewState.IdRef="NClick_41" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d39dfcdf-2c7f-4033-a2b8-9673e1197d55" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='btnGuardarReq' tag='BUTTON' /&gt;" Guid="be156f9c-65e2-41d5-86ff-05df2d4da3e2" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.OCREngine>
+                        <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+                          <ActivityFunc.Argument>
+                            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+                          </ActivityFunc.Argument>
+                        </ActivityFunc>
+                      </uix:NApplicationCard.OCREngine>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" Selector="&lt;html app='chrome.exe' title='Simulador académico de RR. HH.' /&gt;" Url="file:///C:/Users/hernandezl/OneDrive%20-%20HITSS/Documentos/Proyecto%20Practicas/UIPath/Automatizacion_RRHH_Posiciones_Requisiciones/Data/simulador_rrhh_successfactors_fiel_v2.html" Version="V3" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                    <Sequence DisplayName="SQLite - Registrar resultado web" sap:VirtualizedContainerService.HintSize="718,1395" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="ui:DatabaseConnection" Name="conexionSQLiteWeb" />
+                        <Variable x:TypeArguments="sd:DataTable" Name="dtConteoPosiciones" />
+                        <Variable x:TypeArguments="sd:DataTable" Name="dtConteoRequisiciones" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:DatabaseTransaction ContinueOnError="{x:Null}" ConnectionString="Data Source=C:\Users\hernandezl\OneDrive - HITSS\Documentos\Proyecto Practicas\UIPath\Automatizacion_RRHH_Posiciones_Requisiciones\Data\rrhh_trazabilidad.db;Foreign Keys=True;" DatabaseConnection="[conexionSQLiteWeb]" DisplayName="SQLite - Conexión resultado web" sap:VirtualizedContainerService.HintSize="684,1312" sap2010:WorkflowViewState.IdRef="DatabaseTransaction_3" ProviderName="Microsoft.Data.Sqlite" UseTransaction="True">
+                        <ui:DatabaseTransaction.Body>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="650,1179" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="SQLite - Verificar tabla posiciones" ExistingDbConnection="[conexionSQLiteWeb]" sap:VirtualizedContainerService.HintSize="616,147" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_29" Sql="CREATE TABLE IF NOT EXISTS posiciones_simuladas (id INTEGER PRIMARY KEY AUTOINCREMENT, solicitud_id TEXT NOT NULL, estado_aprobacion TEXT DEFAULT 'PENDIENTE_REVISION');">
+                              <ui:ExecuteNonQuery.Parameters>
+                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                              </ui:ExecuteNonQuery.Parameters>
+                            </ui:ExecuteNonQuery>
+                            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="SQLite - Verificar tabla requisiciones" ExistingDbConnection="[conexionSQLiteWeb]" sap:VirtualizedContainerService.HintSize="616,147" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_30" Sql="CREATE TABLE IF NOT EXISTS requisiciones_simuladas (id INTEGER PRIMARY KEY AUTOINCREMENT, solicitud_id TEXT NOT NULL, estado_aprobacion TEXT DEFAULT 'PENDIENTE_REVISION');">
+                              <ui:ExecuteNonQuery.Parameters>
+                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                              </ui:ExecuteNonQuery.Parameters>
+                            </ui:ExecuteNonQuery>
+                            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="SQLite - Registrar posición simulada" ExistingDbConnection="[conexionSQLiteWeb]" sap:VirtualizedContainerService.HintSize="616,147" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_31" Sql="INSERT INTO posiciones_simuladas (solicitud_id, estado_aprobacion) VALUES (@solicitud_id, @estado_aprobacion);">
+                              <ui:ExecuteNonQuery.Parameters>
+                                <InArgument x:TypeArguments="x:String" x:Key="@solicitud_id">[idCasoDemo]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="@estado_aprobacion">PENDIENTE_APROBACION_HUMANA</InArgument>
+                              </ui:ExecuteNonQuery.Parameters>
+                            </ui:ExecuteNonQuery>
+                            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="SQLite - Registrar requisición simulada" ExistingDbConnection="[conexionSQLiteWeb]" sap:VirtualizedContainerService.HintSize="616,147" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_32" Sql="INSERT INTO requisiciones_simuladas (solicitud_id, estado_aprobacion) VALUES (@solicitud_id, @estado_aprobacion);">
+                              <ui:ExecuteNonQuery.Parameters>
+                                <InArgument x:TypeArguments="x:String" x:Key="@solicitud_id">[idCasoDemo]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="@estado_aprobacion">PENDIENTE_APROBACION_HUMANA</InArgument>
+                              </ui:ExecuteNonQuery.Parameters>
+                            </ui:ExecuteNonQuery>
+                            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dtConteoPosiciones]" DisplayName="SQLite - Consultar posiciones simuladas" ExistingDbConnection="[conexionSQLiteWeb]" sap:VirtualizedContainerService.HintSize="616,147" sap2010:WorkflowViewState.IdRef="ExecuteQuery_8" Sql="SELECT COUNT(*) AS Total FROM posiciones_simuladas;">
+                              <ui:ExecuteQuery.Parameters>
+                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                              </ui:ExecuteQuery.Parameters>
+                            </ui:ExecuteQuery>
+                            <WriteLine DisplayName="SQLite - Mostrar conteo posiciones" sap:VirtualizedContainerService.HintSize="616,123" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="[&quot;SQLite posiciones simuladas registradas: &quot; + dtConteoPosiciones.Rows(0)(&quot;Total&quot;).ToString]" />
+                            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dtConteoRequisiciones]" DisplayName="SQLite - Consultar requisiciones simuladas" ExistingDbConnection="[conexionSQLiteWeb]" sap:VirtualizedContainerService.HintSize="616,147" sap2010:WorkflowViewState.IdRef="ExecuteQuery_9" Sql="SELECT COUNT(*) AS Total FROM requisiciones_simuladas;">
+                              <ui:ExecuteQuery.Parameters>
+                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                              </ui:ExecuteQuery.Parameters>
+                            </ui:ExecuteQuery>
+                            <WriteLine DisplayName="SQLite - Mostrar conteo requisiciones" sap:VirtualizedContainerService.HintSize="616,114" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="[&quot;SQLite requisiciones simuladas registradas: &quot; + dtConteoRequisiciones.Rows(0)(&quot;Total&quot;).ToString]" />
+                          </Sequence>
+                        </ui:DatabaseTransaction.Body>
+                      </ui:DatabaseTransaction>
+                    </Sequence>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="752,174" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="718,114" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;REGISTRO SIMULADO OMITIDO | &quot; + idCasoDemo + &quot; | El caso no cumple las validaciones.&quot;]" />
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelApplicationCard.Body>
+      </ueab:ExcelApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>
